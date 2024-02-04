@@ -31,3 +31,6 @@ INIT SCRIPT SAMPLE FOR  qt app.
 ## BITBAKE CHEAT SHEET
 
 bitbake world -c cleanall --continue
+
+## CROSS DEVELOPMENTS
+. /home/db/yocto_raspi/rpi_build/tmp/deploy/sdk/qt5_sdk-rpi4/environment-setup-cortexa72-poky-linux
