@@ -1,0 +1,9 @@
+#ifndef TOOLDEFS_H
+#define TOOLDEFS_H
+
+#define TOOL_START_PAGE 1
+#define TOOL_PAGE_BASE_TEST 2
+#define TOOL_PAGE_COM_TEST 3
+#define TOOL_PAGE_SQL_TEST 4
+
+#endif // TOOLDEFS_H

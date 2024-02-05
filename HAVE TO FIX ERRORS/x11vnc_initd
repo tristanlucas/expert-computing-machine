@@ -1,0 +1,40 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          x11vnc
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start x11vnc at boot time
+# Description:       Start x11vnc at boot time
+### END INIT INFO
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+
+# Function to check the status of x11vnc
+status() {
+    if pgrep -x "x11vnc" > /dev/null; then
+        echo "x11vnc is running."
+    else
+        echo "x11vnc is not running."
+    fi
+}
+
+case "$1" in
+  start)
+    /usr/bin/x11vnc -forever -shared -display :0 -rfbauth /path/to/authfile
+    ;;
+  stop)
+    pkill x11vnc
+    ;;
+  status)
+    status
+    ;;
+  *)
+    echo "Usage: /etc/init.d/x11vnc {start|stop|status}"
+    exit 1
+    ;;
+esac
+
+exit 0
+

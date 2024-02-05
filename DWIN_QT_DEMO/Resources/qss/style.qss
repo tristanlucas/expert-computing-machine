@@ -1,0 +1,252 @@
+QLabel
+{
+  border: none;
+  font-size: 18px;
+}
+
+QLineEdit
+{
+  font-size: 18px;
+}
+
+QComboBox
+{
+  font-size: 18px;
+}
+
+QWidget#centralWidget
+{
+  border: none;
+  background-color: rgb(240,240,240);
+}
+
+QWidget#headerWidget
+{
+  border: none;
+  background-color: rgb(96,168,239);
+}
+
+QWidget#bodyWidget
+{
+  border: none;
+  background-color: rgb(240,240,240);
+}
+
+QPushButton
+{
+  outline:none;
+  border: 1px solid rgb(80,80,80);
+  border-radius: 2px;
+  font-size: 18px;
+  background-color: rgb(96,168,239);
+  color: rgb(255,255,255);
+}
+
+QPushButton:hover
+{
+  background-color: rgb(65,134,196);
+}
+
+QPushButton:pressed
+{
+  background-color: rgb(44,112,174);
+}
+
+QWidget#headerWidget QPushButton
+{
+  border: none;
+  background: transparent;
+  color: rgb(255,255,255);
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 0px;
+}
+
+QWidget#headerWidget QPushButton:hover
+{
+  background-color: rgb(65,134,196);
+}
+
+QWidget#headerWidget QPushButton[status="on"]
+{
+  color: rgb(255,0,0);
+  background-color: rgb(240,240,240);
+}
+
+QWidget#logoWidget
+{
+  border: none;
+  border-image: url(":/images/logo.png");
+}
+
+QWidget#titleLabel
+{
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+QLineEdit
+{
+  color: rgb(0, 0, 0);
+}
+
+QLineEdit[status="error"]
+{
+  color: rgb(255, 0, 0);
+}
+
+QLineEdit[status="ok"]
+{
+  color: rgb(12, 141, 66);
+}
+
+QWidget#toolTouchTest QPushButton:hover
+{
+  background-color: rgb(255,1,4);
+}
+
+QPushButton#btnSummary, QPushButton#btnDetail, QPushButton#btnReset
+{
+  outline:none;
+  border: 1px solid rgb(80,80,80);
+  border-radius: 2px;
+  font-size: 18px;
+  background-color: rgb(96,168,239);
+  color: rgb(255,255,255);
+}
+
+QPushButton#btnReset:pressed
+{
+  background-color: rgb(44,112,174);
+}
+
+QPushButton#btnSummary:pressed, QPushButton#btnDetail:pressed
+{
+  color: rgb(255,255,255);
+  background-color: rgb(255,0,0);
+}
+
+QPushButton#btnSummary[status="on"], QPushButton#btnDetail[status="on"]
+{
+  color: rgb(255,255,255);
+  background-color: rgb(255,0,0);
+}
+
+QTextEdit
+{
+  border: 1px solid rgb(40,40,40);
+}
+
+/* 水平滚动条*/
+QScrollBar:horizontal
+{
+  border: none;
+  background: rgb(202,202,202);
+  height: 23px;
+  margin: 0px 22px 0 22px;
+}
+QScrollBar::handle:horizontal
+{
+  border: none;
+  background: rgba(160,160,160);
+  min-width: 40px;
+}
+QScrollBar::add-page:horizontal
+{
+  background: transparent;
+  height:23px;
+}
+QScrollBar::sub-page:horizontal
+{
+  background: transparent;
+  height:23px;
+}
+
+QScrollBar::add-line:horizontal
+{
+  border: none;
+  background: rgb(202,202,202);
+  width: 22px;
+  subcontrol-position: right;
+  subcontrol-origin: margin;
+}
+QScrollBar::sub-line:horizontal
+{
+  border: none;
+  background: rgb(202,202,202);
+  width: 22px;
+  subcontrol-position: left;
+  subcontrol-origin: margin;
+}
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal
+{
+  border: none;
+  width: 18px;
+  height: 18px;
+}
+QScrollBar:left-arrow:horizontal
+{
+  image: url(:/images/arrow_left.png)
+}
+QScrollBar::right-arrow:horizontal
+{
+  image: url(:/images/arrow_right.png)
+}
+
+/* 垂直滚动条*/
+QScrollBar:vertical
+{
+  border: none;
+  background: rgb(202,202,202);
+  width: 23px;
+  margin: 22px 0px 22px 0px;
+}
+QScrollBar::handle:vertical
+{
+  border: none;
+  background: rgba(160,160,160);
+  min-height: 40px;
+}
+QScrollBar::add-page:vertical
+{
+  background: transparent;
+  height:23px;
+}
+
+QScrollBar::sub-page:vertical
+{
+  background: transparent;
+  height:23px;
+}
+
+QScrollBar::add-line:vertical
+{
+  border: none;
+  background: rgb(202,202,202);
+  height: 22px;
+  subcontrol-position: bottom;
+  subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical
+{
+  border: none;
+  background: rgb(202,202,202);
+  height: 22px;
+  subcontrol-position: top;
+  subcontrol-origin: margin;
+}
+QScrollBar:up-arrow:vertical, QScrollBar::down-arrow:vertical
+{
+  border: none;
+  width: 18px;
+  height: 18px;
+}
+QScrollBar::up-arrow:vertical
+{
+  image: url(:/images/arrow_up.png)
+}
+QScrollBar::down-arrow:vertical
+{
+  image: url(:/images/arrow_down.png)
+}
