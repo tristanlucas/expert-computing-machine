@@ -1,6 +1,0 @@
-.vscode/
-cmake-build-debug/
-cmake-build-release/
-.idea/
-*.db
-CMakeLists.txt.user*
