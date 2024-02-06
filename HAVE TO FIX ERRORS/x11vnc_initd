@@ -97,3 +97,22 @@ sleep  5s
 sudo shutdown -r now
 
 
+##=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$HOME/.vnc/xstartup
+#!/bin/bash
+
+xrdb $HOME/.Xresources
+
+# Check if GNOME is installed and start it if available
+#exec gnome-session
+#exec startxfce4
+exec startlxde
+#exec xterm
+
+#########
+COMMANDS TO START
+vncserver :1
+95000:9501
+localhost binding
+
+
