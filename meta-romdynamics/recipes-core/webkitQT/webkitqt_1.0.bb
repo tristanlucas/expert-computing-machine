@@ -1,27 +1,19 @@
 SUMMARY = "Qt Web Browser Application"
 DESCRIPTION = "A Qt-based web browser application."
 
-LICENSE = "GPL-3.0"
-LIC_FILES_CHKSUM = "file://../QWebBrowser/LICENSE;md5=1ebbd3e34237af26da5dc08a4e440464"
+LICENSE = "MIT"
+LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384361b4de20420"
 
-SRC_URI = "file://../QWebBrowser/*"
+SRC_URI = "file://helloworld.c"
 
-S = "${WORKDIR}/QWebBrowser"
-
-inherit cmake
-
-do_configure() {
-    mkdir -p ${B}/build
-    cd ${B}/build
-    cmake ${S} -DCMAKE_INSTALL_PREFIX=${D}${prefix}
-}
+S = "${WORKDIR}/build"
 
 do_compile() {
-    oe_runmake -C ${B}/build
+    ${CC} ${CFLAGS} ${LDFLAGS} ${WORKDIR}/helloworld.c -o ${S}/helloworld
 }
 
 do_install() {
-    oe_runmake -C ${B}/build install
+    install -d ${D}${bindir}
+    install -m 0755 ${S}/helloworld ${D}${bindir}/
 }
 
-FILES_${PN} += "${bindir}/*"
